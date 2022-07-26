@@ -29,7 +29,10 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    this.getUserDetails()
+    
+  }
+  getUserDetails(){
     this.api.getUserById(this.u_id).subscribe(
       data=>{
         this.user=data

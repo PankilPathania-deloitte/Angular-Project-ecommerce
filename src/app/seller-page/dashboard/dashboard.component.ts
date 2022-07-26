@@ -13,17 +13,21 @@ import { WishlistService } from 'src/app/services/wishlist.service';
 })
 export class DashboardComponent implements OnInit {
 
-  products!: Product[];
+  // products!: Product[];
+  products: any[] = []
   url = "http://localhost:3000/products/"
+  u_id = localStorage.getItem("id")
   constructor(private service: ProductService,
     private snackBar: MatSnackBar, private cartService: CartService,private http:HttpClient) { }
 
   ngOnInit(): void {
-    this.service.getProduct().subscribe(
-      data => {
-        this.products = data
-      }
-    )
+    // this.service.getProduct().subscribe(
+    //   data => {
+    //     this.products = data
+    //   }
+    // )
+    this.getProduct()
+    
   }
 
 
@@ -44,6 +48,19 @@ export class DashboardComponent implements OnInit {
     );
   }
 
+  getProduct(){
+    this.products=[]
+    this.service.getProductByOwner().subscribe(
+      (data: any) => {
+        data.forEach((v: Product, i: any) => {
+          if (v.owner == this.u_id) {
+            this.products.push(v)
+          }
+        })
+        
+      }
+    )
+  }
   removeProduct(product: any) {
     this.http.delete(this.url+product.id).subscribe(
       data=>{

@@ -28,6 +28,14 @@
           "product_weight": "200ml",
           "product_price": "180",
           "owner": "pankil@gmail.com"
+        },
+        {
+          "product_name": "Test 1",
+          "product_weight": "123 g",
+          "product_price": "123",
+          "owner": "seller@gmail.com",
+          "count": 0,
+          "id": "kzjMx2j"
         }
       ],
       "cart": []
@@ -47,6 +55,24 @@
         }
       ],
       "cart": []
+    },
+    {
+      "name": "seller test",
+      "password": "12345",
+      "id": "seller@gmail.com",
+      "role": "seller",
+      "wishlist": [],
+      "cart": [
+        {
+          "product_name": "Test 1",
+          "product_weight": "123 g",
+          "product_price": "123",
+          "owner": "seller@gmail.com",
+          "count": 0,
+          "id": "kzjMx2j"
+        }
+      ],
+      "phone": "1234567890"
     }
   ],
   "products": [
@@ -67,14 +93,6 @@
       "count": 1
     },
     {
-      "id": "3",
-      "product_name": "Nivea",
-      "product_weight": "200ml",
-      "product_price": "180",
-      "owner": "pankil@gmail.com",
-      "count": 0
-    },
-    {
       "product_name": "Beardo",
       "product_weight": "200g",
       "product_price": "200",
@@ -89,6 +107,30 @@
       "owner": "pankil@gmail.com",
       "id": "5qzcr5a",
       "count": 0
+    },
+    {
+      "product_name": "Test",
+      "product_weight": "123 g",
+      "product_price": "123",
+      "owner": "seller@gmail.com",
+      "count": 1,
+      "id": "6O7qeOS"
+    },
+    {
+      "product_name": "Test 1",
+      "product_weight": "123 g",
+      "product_price": "123",
+      "owner": "seller@gmail.com",
+      "count": 0,
+      "id": "kzjMx2j"
+    },
+    {
+      "product_name": "Test 2",
+      "product_weight": "1 packet",
+      "product_price": "234",
+      "owner": "seller@gmail.com",
+      "count": 0,
+      "id": "GK-sCCJ"
     }
   ]
 }

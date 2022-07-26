@@ -21,19 +21,19 @@
     </div>
 </mat-card> -->
 
-<div class="d-flex">
-    <input class="form-control me-2" type="search" [(ngModel)]='product_name' placeholder="Search" aria-label="Search">
-    &nbsp;
-    <button class="btn btn-outline-dark" type="button" (click)="onNameFilter()">
-        <mat-icon>search</mat-icon>
+<div class="ss" style="width: 20%; margin-left:70%;margin-top: 1%;">
+    <input class="form-control me-2" style="float:right ;" type="search" [(ngModel)]='product_name' placeholder="Search" aria-label="Search">
+    
+    <button class="btn btn-outline-dark " type="button" (click)="onNameFilter()" >
+        <mat-icon class="ic">search</mat-icon>
     </button>
-    &nbsp;
+    
     <button class="btn btn-outline-dark" type="button" (click)="onNameFilterClear()">
         <mat-icon>close</mat-icon>
     </button>
 </div>
 
-<div class="row justify-content-center text-center">
+<div class="row justify-content-center text-center" style="margin-top:2% ;">
     <div class="col-md-8 col-lg-6" style="background-color: rgb(253, 255, 225); margin-left:25%">
         <div class="header">
             <h3 style="font-size: 15px; margin-top: 15px;" >Featured Product</h3>
