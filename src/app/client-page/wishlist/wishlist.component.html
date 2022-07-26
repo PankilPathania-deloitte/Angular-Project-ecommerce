@@ -1,0 +1,24 @@
+
+<div class="container mt-2">
+    <div class="row1">
+        <div class="col item">
+            <div class="card item-card contain " *ngFor="let product of wishlist">
+                <h4 class="card-title text-center">
+                    {{product.product_name}}
+                </h4>
+                <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="Photo of sunset">
+                <h5 class="item-card-title mt-3 mb-3"></h5>
+                <p class="card-text">Weight : {{product.product_weight}}
+                    <br>Price : {{product.product_price}}
+                </p>
+                <div class="buttons">
+                    <button mat-button class="like" (click)="removeProductFromWishlist(product)"> <mat-icon>delete</mat-icon>
+                    </button>
+                <button mat-button class="bll"  (click)="openBuyDialog(product)"> <mat-icon >add_shopping_cart</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

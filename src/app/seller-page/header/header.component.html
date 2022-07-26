@@ -1,0 +1,32 @@
+<mat-toolbar class="example-header">
+    <h1>Welcome to Angular</h1>
+
+    <!-- <span class="square"></span> FOODIE -->
+    <span class="example-spacer"></span>
+    
+    <!-- <span style="margin-right: 10%;">
+        <mat-icon style="margin-top: 10px; margin-right: 5px;">account_balance_wallet</mat-icon>
+        
+    </span> -->
+    <mat-icon style="margin-right: 1%;">face</mat-icon> 
+        <span class="name" >{{user.name}}</span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"
+        (onMenuOpen)="changeIcon()" (onMenuClose)="changeIcon()">
+        <div *ngIf="!arrow; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+            <mat-icon>keyboard_arrow_down</mat-icon>
+        </ng-template>
+        <ng-template #elseBlock>
+            <mat-icon>keyboard_arrow_up</mat-icon>
+        </ng-template>
+    </button>
+    <mat-menu #menu="matMenu">
+        <ng-template matMenuContent>
+            
+            <button mat-menu-item class="menuButton" (click)="logout()"routerLink="/">
+                <span>Logout</span>
+            </button>
+
+        </ng-template>
+    </mat-menu>
+</mat-toolbar>

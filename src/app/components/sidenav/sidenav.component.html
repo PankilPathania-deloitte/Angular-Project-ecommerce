@@ -1,0 +1,44 @@
+<div class="screen">
+    <mat-sidenav-container>
+      <mat-sidenav mode="side" [opened]="toggle" [ngStyle]="{ 'width.em': sidenavWidth }"
+      opened="true"
+      (mouseenter)="increase()"
+      (mouseleave)="decrease()">
+            <div class='side__icon__container'>
+                <button mat-button  #dashboard  [ngClass]="{'active':isValue==1}" (click)="onClick('dashboard',1)">
+                    <mat-icon>
+                        dashboard
+                    </mat-icon>
+                    <span *ngIf="sidenavWidth>6">
+                        Dashboard
+                    </span>
+                </button>
+            </div>
+            <div class='side__icon__container'>
+                <button mat-button  #recommendation [ngClass]="{'active':isValue==2}" (click)="onClick('recommendation',2)">
+                    <mat-icon>
+                        restaurant
+                    </mat-icon>
+                    <span *ngIf="sidenavWidth>6">
+                        Recommendation
+                    </span>
+                </button>
+            </div>
+            <div class='side__icon__container'>
+                <button mat-button  #recommendation_history [ngClass]="{'active':isValue==3}" (click)="onClick('recommendation-history',3)">
+                    <mat-icon>
+                        history
+                    </mat-icon>
+                    <span *ngIf="sidenavWidth>6">
+                        Recommendation History
+                    </span>
+                </button>
+            </div>
+        </mat-sidenav>
+        <mat-sidenav-content [ngStyle]=" {'margin-left.em': sidenavWidth}">
+            <ng-content></ng-content>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+    </div>
+    
+    

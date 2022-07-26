@@ -1,0 +1,54 @@
+<div class="screen">
+    <mat-sidenav-container>
+      <mat-sidenav mode="side" [opened]="toggle" [ngStyle]="{ 'width.em': sidenavWidth }"
+      opened="true"
+      (mouseenter)="increase()"
+      (mouseleave)="decrease()">
+            <div class='side__icon__container'>
+                <button mat-button  #dashboard  [ngClass]="{'active':isValue==1}" (click)="onClick('dashboard',1)">
+                    <mat-icon>
+                        home
+                    </mat-icon>
+                    <span *ngIf="sidenavWidth>6">
+                    Home
+                    </span>
+                </button>
+            </div>
+            <div class='side__icon__container'>
+                <button mat-button  #recommendation [ngClass]="{'active':isValue==2}" (click)="onClick('cart',2)">
+                    <mat-icon>
+                    add_shopping_cart
+                    </mat-icon>
+                    <span *ngIf="sidenavWidth>6">
+                    Cart
+                    </span>
+                </button>
+            </div>
+            <div class='side__icon__container'>
+                <button mat-button  #recommendation_history [ngClass]="{'active':isValue==3}" (click)="onClick('wishlist',3)">
+                    <mat-icon>
+                        favorite_border
+                    </mat-icon>
+                    <span *ngIf="sidenavWidth>6">
+                    Wishlist
+                    </span>
+                </button>
+            </div>
+            <div class='side__icon__container'>
+                <button mat-button  #recommendation_history [ngClass]="{'active':isValue==4}" (click)="onClick('profile',4)">
+                    <mat-icon>
+                    account_circle
+                    </mat-icon>
+                    <span *ngIf="sidenavWidth>6">
+                    Profile
+                    </span>
+                </button>
+            </div>
+        </mat-sidenav>
+        <mat-sidenav-content [ngStyle]=" {'margin-left.em': sidenavWidth}">
+            <ng-content></ng-content>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+    </div>
+    
+    

@@ -1,0 +1,41 @@
+<mat-toolbar class="example-header">
+    <img src="">
+
+    <!-- <span class="square"></span> FOODIE -->
+    <span class="example-spacer"></span>
+    <span class="search-bar">
+        <mat-form-field style="height: fit-content;" floatPlaceholder="never" >
+            <input matInput  style="font-size: 20px;  ">
+            <mat-placeholder style="font-style:italic; font-size:15px;" >Search</mat-placeholder>
+            <mat-icon matSuffix style="font-size: 20px;">search</mat-icon>
+        </mat-form-field>
+    </span>
+    <!-- <span style="margin-right: 10%;">
+        <mat-icon style="margin-top: 10px; margin-right: 5px;">account_balance_wallet</mat-icon>
+        
+    </span> -->
+    <button mat-icon-button style="margin-right: 7%;">
+        <mat-icon>face</mat-icon> {{user?.name}}
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu"
+        (onMenuOpen)="changeIcon()" (onMenuClose)="changeIcon()">
+        <div *ngIf="!arrow; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+            <mat-icon>keyboard_arrow_down</mat-icon>
+        </ng-template>
+        <ng-template #elseBlock>
+            <mat-icon>keyboard_arrow_up</mat-icon>
+        </ng-template>
+    </button>
+    <mat-menu #menu="matMenu">
+        <ng-template matMenuContent>
+            <button mat-menu-item class="menuButton" routerLink="/home/edit-details">
+                <span>Edit Details</span>
+            </button>
+            <button mat-menu-item class="menuButton" (click)="logout()"routerLink="/">
+                <span>Logout</span>
+            </button>
+
+        </ng-template>
+    </mat-menu>
+</mat-toolbar>

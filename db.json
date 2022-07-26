@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "id": "pankil@gmail.com",
+      "name": "Pankil Pathania",
+      "role": "seller",
+      "password": "12345",
+      "wishlist": [],
+      "phone": "7018427205",
+      "cart": []
+    },
+    {
+      "name": "pa pa",
+      "password": "1234567890",
+      "id": "pp@gmail.com",
+      "role": "client",
+      "phone": "1234567890",
+      "wishlist": [
+        {
+          "id": "1",
+          "product_name": "Surf Excel",
+          "product_weight": "1Kg",
+          "product_price": "590"
+        },
+        {
+          "id": "2",
+          "product_name": "Nivea",
+          "product_weight": "200ml",
+          "product_price": "180",
+          "owner": "pankil@gmail.com"
+        }
+      ],
+      "cart": []
+    },
+    {
+      "name": "test test",
+      "password": "1234567890",
+      "id": "tt@gmail.com",
+      "role": "client",
+      "phone": "1234567890",
+      "wishlist": [
+        {
+          "id": "1",
+          "product_name": "Surf Excel",
+          "product_weight": "1Kg",
+          "product_price": "590"
+        }
+      ],
+      "cart": []
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "product_name": "Surf Excel",
+      "product_weight": "1Kg",
+      "product_price": "590",
+      "owner": "pankil@gmail.com",
+      "count": 2
+    },
+    {
+      "id": "2",
+      "product_name": "Nivea",
+      "product_weight": "200ml",
+      "product_price": "180",
+      "owner": "pankil@gmail.com",
+      "count": 1
+    },
+    {
+      "id": "3",
+      "product_name": "Nivea",
+      "product_weight": "200ml",
+      "product_price": "180",
+      "owner": "pankil@gmail.com",
+      "count": 0
+    },
+    {
+      "product_name": "Beardo",
+      "product_weight": "200g",
+      "product_price": "200",
+      "id": "lEt43H-",
+      "owner": "pankil@gmail.com",
+      "count": 1
+    },
+    {
+      "product_name": "kk",
+      "product_weight": "123 g",
+      "product_price": "123",
+      "owner": "pankil@gmail.com",
+      "id": "5qzcr5a",
+      "count": 0
+    }
+  ]
+}

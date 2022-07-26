@@ -1,0 +1,73 @@
+<!-- <div class="container mt-2">
+    <div class="row">
+        <div class="col-md-3 col-sm-4 item">
+            <div class="card item-card " *ngFor="let product of cart">
+                <h4 class="card-title text-center">
+                    {{product.product_name}}
+                </h4>
+                <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="Photo of sunset">
+                <h5 class="item-card-title mt-3 mb-3"></h5>
+                <p class="card-text">Weight : {{product.product_weight}}
+                    <br>Price : {{product.product_price}}
+                </p>
+                <div class="buttons">
+                    <button mat-button (click)="removeProductFromCart(product)"> <mat-icon>delete</mat-icon>
+                        </button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div> -->
+
+
+<div class="container mt-2">
+    <div class="row1">
+        <div class="col item">
+            <div class="card item-card contain " *ngFor="let product of cart">
+                <h4 class="card-title text-center">
+                    {{product.product_name}}
+                </h4>
+                <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                    alt="Photo of sunset">
+                <h5 class="item-card-title mt-3 mb-3"></h5>
+                <p class="card-text">Weight : {{product.product_weight}}
+                    <br>Price : {{product.product_price}}
+                </p>
+                <div class="buttons">
+                    <button mat-button class="bll" (click)="removeProductFromCart(product)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button (click)="payment()" style="margin-left: 50%;" *ngIf="cart.length!=0">Checkout</button>
+
+
+
+    <div class="container-fluid  mt-100" *ngIf="cart.length==0">
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Cart</h5>
+                    </div>
+                    <div class="card-body cart">
+                        <div class="col-sm-12 empty-cart-cls text-center">
+                            <h3><strong>Your Cart is Empty</strong></h3>
+                            <h4>Add something to make me happy :)</h4>
+                            <a routerLink="/client-page/dashboard" class="btn btn-primary cart-btn-transform m-3" data-abc="true">continue
+                                shopping</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

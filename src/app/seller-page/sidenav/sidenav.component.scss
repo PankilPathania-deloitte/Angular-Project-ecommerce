@@ -1,0 +1,40 @@
+.sidenav__icon {
+    font-size: 30px;
+}
+
+button{
+    height: 15px;
+    width: 100%;
+    padding:15px;
+    padding-bottom: 50px;
+    color: black;
+    border: white;
+    background-color: transparent;
+    /* margin-top: 30px;
+    margin-left: 18px; */
+    border-radius: 0px;
+    cursor: pointer;
+    text-align: center;
+    font-size:medium;
+}
+
+
+mat-sidenav-container {
+    height: fit-content;
+}
+mat-sidenav-content {
+    height: 93vh;
+}
+
+button:hover{
+    background-color: rgb(243, 153, 9);
+}
+.active{
+    border-right: rgb(65, 2, 65) solid 3px ;
+}
+mat-sidenav {
+    background-color:  rgb(252, 237, 196);
+    width: 250px;
+    align-items: center;
+    /* padding: 10px; */
+}

@@ -1,0 +1,44 @@
+.example-header{
+    background-color: rgb(239, 182, 69);
+    color: black;
+    padding: 15px;
+}
+
+mat-toolbar {
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    display: flex;
+
+}
+
+::ng-deep .mat-input-element::placeholder{
+    color:rgb(134, 13, 161);
+    font-size: 40px;
+}
+
+.search-bar {
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-top: 10px;
+}
+
+.square {
+    height: 30px;
+    width: 30px;
+    background-color: rgb(133, 133, 133);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.menuButton:hover {
+    background-color: black;
+    color: white
+}
+.name{
+    font-size: medium;
+}
