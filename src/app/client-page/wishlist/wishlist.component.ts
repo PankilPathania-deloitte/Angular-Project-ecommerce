@@ -71,9 +71,5 @@ export class WishlistComponent implements OnInit {
     }
 
 
-  ngOnChanges(){
-    if(this.wishlist){
-      this.getWishlist()
-    } 
-  }
+  
 }

@@ -22,4 +22,15 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('checking variable',()=>{
+    
+    expect(component.openSideNav).toBeTrue
+
+  })
+
+  it('toggle sidenav',()=>{
+    component.toggleSidenav()
+    expect(component.openSideNav).toBeTrue
+  })
 });

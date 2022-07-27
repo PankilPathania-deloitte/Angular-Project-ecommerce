@@ -9,9 +9,6 @@ import { ApiService } from './services/api.service';
 export class AuthGuard implements CanActivate {
   constructor(private auth: ApiService, private router: Router) {
   }
-
-
-
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot

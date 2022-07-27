@@ -12,16 +12,22 @@ export class ProfileComponent implements OnInit {
   u_id=localStorage.getItem("id")
   url = "http://localhost:3000/users/"
 
-  user!:Person
-  constructor(private service:ApiService) { }
+  user:Person=new Person()
+  
+  constructor(private service:ApiService) { 
+    
+  }
 
   ngOnInit(): void {
+    
+    this.getData()
+  }
 
+  getData(){
     this.service.getUserById(this.u_id).subscribe(
       data=>{
         this.user=data
       }
     )
   }
-
 }

@@ -22,4 +22,13 @@ describe('ClientPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('checking variable',()=>{
+    expect(component.openSideNav).toBeTrue
+  })
+
+  it('toggle function',()=>{
+    component.toggleSidenav()
+    expect(component.openSideNav).toBeTrue
+  })
 });

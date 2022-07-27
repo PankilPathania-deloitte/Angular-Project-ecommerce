@@ -28,14 +28,6 @@
           "product_weight": "200ml",
           "product_price": "180",
           "owner": "pankil@gmail.com"
-        },
-        {
-          "product_name": "Test 1",
-          "product_weight": "123 g",
-          "product_price": "123",
-          "owner": "seller@gmail.com",
-          "count": 0,
-          "id": "kzjMx2j"
         }
       ],
       "cart": []
@@ -113,7 +105,7 @@
       "product_weight": "123 g",
       "product_price": "123",
       "owner": "seller@gmail.com",
-      "count": 1,
+      "count": 2,
       "id": "6O7qeOS"
     },
     {
@@ -125,12 +117,12 @@
       "id": "kzjMx2j"
     },
     {
-      "product_name": "Test 2",
-      "product_weight": "1 packet",
+      "product_name": "Test 3",
+      "product_weight": "122 g",
       "product_price": "234",
       "owner": "seller@gmail.com",
       "count": 0,
-      "id": "GK-sCCJ"
+      "id": "ZtkpKMv"
     }
   ]
 }

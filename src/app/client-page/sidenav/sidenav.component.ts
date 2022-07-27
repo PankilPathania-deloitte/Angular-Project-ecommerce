@@ -21,9 +21,6 @@ export class SidenavComponent implements OnInit {
     this.router.navigate(['/client-page/'+routeTo]);
 
   }
- 
-
-
   constructor(private router: Router) {}
   
 

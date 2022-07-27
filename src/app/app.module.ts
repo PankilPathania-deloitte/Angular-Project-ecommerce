@@ -8,10 +8,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from './material/material.module';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
-import { HeaderComponent } from './components/header/header.component';
-import { HomeComponent } from './components/home/home.component';
-import { ClientPageModule } from './client-page/client-page.module';
+
+
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 
@@ -22,11 +20,6 @@ import { StoreModule } from '@ngrx/store';
     AppComponent,
     LoginComponent,
     SignupComponent,
-    SidenavComponent,
-    HeaderComponent,
-    HomeComponent,
-    
-    
   
   ],
   imports: [

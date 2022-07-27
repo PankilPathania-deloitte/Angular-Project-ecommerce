@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Person } from 'src/app/models/person.model';
 import { ApiService } from 'src/app/services/api.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class HeaderComponent implements OnInit {
   arrow = false; // for onMenuOpen 
   val: string = "keyboard_arrow_down"; // value of the function to be used for onMenuOpen
 
-  user : any; // storing the user details 
+  user: Person=new Person; // storing the user details 
   u_id=localStorage.getItem("id")
 
   constructor( private route: Router,private api:ApiService) { 
@@ -29,7 +30,11 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getData()
+    
+  }
 
+  getData(){
     this.api.getUserById(this.u_id).subscribe(
       data=>{
         this.user=data
