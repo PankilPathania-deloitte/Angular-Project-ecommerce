@@ -10,8 +10,6 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ProductsComponent implements OnInit {
 
-
-  
   u_id=localStorage.getItem("id")
   addForm = new FormGroup({
     product_name: new FormControl('', [Validators.required]),
@@ -32,8 +30,6 @@ export class ProductsComponent implements OnInit {
     }
     this.showSnackBarProductBought(final.product_name,"dismiss")
     this.service.addProduct(final)
-
-    
   }
 
   showSnackBarProductBought(productName: string, action: string) {

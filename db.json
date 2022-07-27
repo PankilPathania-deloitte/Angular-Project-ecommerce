@@ -55,14 +55,6 @@
       "role": "seller",
       "wishlist": [],
       "cart": [
-        {
-          "product_name": "Test 1",
-          "product_weight": "123 g",
-          "product_price": "123",
-          "owner": "seller@gmail.com",
-          "count": 0,
-          "id": "kzjMx2j"
-        }
       ],
       "phone": "1234567890"
     }

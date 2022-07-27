@@ -25,7 +25,7 @@ export class ProductService {
     const headers = { 'content-type': 'application/json' }
     const body = JSON.stringify(product);
     console.log(body)
-    this.http.post(this.url, body, { 'headers': headers }).subscribe(
+    return this.http.post(this.url, body, { 'headers': headers }).subscribe(
       (data: any) => {
         this.router.navigate(['/seller-page/dashboard'])
       }, (error: any) => {
@@ -35,7 +35,7 @@ export class ProductService {
   }
 
   updateProduct(product:Product){
-    this.http.put(this.url+product.id,product).subscribe(
+    return this.http.put(this.url+product.id,product).subscribe(
       data=>{
         console.log(data)
       }

@@ -10,7 +10,13 @@ describe('SearchService', () => {
     service = TestBed.inject(SearchService);
   });
 
-  // it('should be created', () => {
-  //   expect(service).toBeTruthy();
-  // });
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+
+
+  it('should search', () => {
+    let x = service.setSearchString("S")
+    console.log("SEARCH", x)
+  });
 });

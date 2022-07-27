@@ -12,7 +12,8 @@ export class ProfileComponent implements OnInit {
   u_id=localStorage.getItem("id")
   url = "http://localhost:3000/users/"
 
-  user:Person=new Person()
+  user: Person=new Person;
+  
   
   constructor(private service:ApiService) { 
     
@@ -21,6 +22,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     
     this.getData()
+    
   }
 
   getData(){
